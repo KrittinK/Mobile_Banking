@@ -32,49 +32,11 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              SizedBox(
-                width: 261,
-                height: 56,
-                child: TextField(
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: const BorderSide(
-                        width: 0.1,
-                      ),
-                    ),
-                    label: const Center(
-                      child: Text(
-                        'Enter your ID',
-                        style: TextStyle(fontSize: 15),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              buildTextField(text: 'Enter your ID'),
               const SizedBox(
                 height: 25,
               ),
-              SizedBox(
-                width: 261,
-                height: 56,
-                child: TextField(
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: const BorderSide(
-                        width: 0.1,
-                      ),
-                    ),
-                    label: const Center(
-                      child: Text(
-                        'Password',
-                        style: TextStyle(fontSize: 15),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              buildTextField(text: 'Password'),
               const SizedBox(
                 height: 35,
               ),
@@ -144,4 +106,28 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
+
+  Widget buildTextField({
+    required String text,
+  }) =>
+      SizedBox(
+        width: 261,
+        height: 56,
+        child: TextField(
+          decoration: InputDecoration(
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(15),
+              borderSide: const BorderSide(
+                width: 0.1,
+              ),
+            ),
+            label: Center(
+              child: Text(
+                text,
+                style: const TextStyle(fontSize: 15),
+              ),
+            ),
+          ),
+        ),
+      );
 }
