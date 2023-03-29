@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class NotificationsScreen extends StatelessWidget {
-  const NotificationsScreen({super.key});
+class TypeOfPayment extends StatelessWidget {
+  const TypeOfPayment({super.key});
 
   Widget buildContainer({
     required String text,
@@ -9,14 +9,15 @@ class NotificationsScreen extends StatelessWidget {
       Container(
         color: Colors.red,
         height: 100.0,
-        padding: const EdgeInsets.all(30.0),
+        padding: const EdgeInsets.all(25.0),
         margin: const EdgeInsets.all(5.0),
-        child: Center(
-            child: Text(text,
-                style: const TextStyle(
-                  fontSize: 20.0,
-                  color: Colors.white,
-                ))),
+        child: Row(children: [
+          Text(text,
+              style: const TextStyle(
+                fontSize: 20.0,
+                color: Colors.white,
+              )),
+        ]),
       );
 
   @override
@@ -39,8 +40,9 @@ class NotificationsScreen extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: SizedBox(height: 50),
             ),
-            buildContainer(text: 'Payment Form Sent To You'),
-            buildContainer(text: 'Payment Form Sent To Parent'),
+            buildContainer(text: 'Credit Card'),
+            buildContainer(text: 'Transfer QR Code'),
+            buildContainer(text: 'Connect With Bank'),
           ],
         ),
       ),
