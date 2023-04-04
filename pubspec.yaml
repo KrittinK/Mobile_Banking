@@ -64,6 +64,8 @@ flutter:
     - images/Visa.png
     - images/Mastercard.png
     - images/JCB.png
+    - images/event1.png
+    - images/event2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

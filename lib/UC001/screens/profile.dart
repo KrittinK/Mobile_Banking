@@ -1,0 +1,112 @@
+import 'package:flutter/material.dart';
+
+class Profile extends StatelessWidget {
+  const Profile({super.key});
+  @override
+  Widget build(BuildContext context) {
+    String userName = 'PANUPONG DANGKAJITPETCH';
+    String classYear = 'Year 1';
+    String email = 'pdangkaj@cmkl.ac.th';
+    String phone = '092-XXX-XXXX';
+    String address = 'Silom, Bangkok';
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: <Widget>[
+            Stack(
+              clipBehavior: Clip.none,
+              children: <Widget>[
+                AppBar(
+                  backgroundColor: Colors.red[800],
+                  toolbarHeight: 200,
+                  leading: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.arrow_back),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                      const Spacer(flex: 1),
+                      IconButton(
+                        icon: const Icon(Icons.edit),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/editProfile');
+                        },
+                      ),
+                    ],
+                  ),
+                  leadingWidth: 500,
+                ),
+                Positioned(
+                  right: 0,
+                  left: 0,
+                  bottom: -26,
+                  child: FloatingActionButton(
+                    onPressed: () {},
+                    backgroundColor: Colors.grey,
+                    child: const Icon(Icons.person),
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                Container(
+                  color: Colors.transparent,
+                  height: 100.0,
+                  padding: const EdgeInsets.all(30.0),
+                  margin: const EdgeInsets.all(5.0),
+                  child: Center(
+                      child: Text(userName,
+                          style: const TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ))),
+                ),
+                Container(
+                    color: Colors.grey[300],
+                    constraints: const BoxConstraints(),
+                    padding: const EdgeInsets.all(30.0),
+                    margin: const EdgeInsets.all(5.0),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text('Personal Info',
+                              style: TextStyle(
+                                fontSize: 15.0,
+                                color: Colors.grey,
+                              )),
+                          const SizedBox(height: 20),
+                          Text('Class: $classYear'),
+                          const SizedBox(height: 20),
+                          Text('E-mail: $email'),
+                          const SizedBox(height: 20),
+                          Text('Phone: $phone'),
+                          const SizedBox(height: 20),
+                          Text('Address: $address'),
+                          const SizedBox(height: 20),
+                          Row(
+                            children: const [
+                              Text('Active'),
+                              Icon(Icons.circle,
+                                  size: 20, color: Colors.lightGreen),
+                              Text('/'),
+                              Text('Offline'),
+                              Icon(Icons.circle, size: 20, color: Colors.grey),
+                              Text('/'),
+                              Text('Do Not Disturb'),
+                              Icon(Icons.circle, size: 20, color: Colors.red),
+                            ],
+                          ),
+                        ])),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
