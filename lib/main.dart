@@ -9,6 +9,8 @@ import 'package:flutter_template/UC001/screens/type_of_payment.dart';
 import 'package:flutter_template/UC001/screens/profile.dart';
 import 'package:flutter_template/UC001/screens/event.dart';
 
+import 'UC001/screens/connect_with_bank_screen.dart';
+
 
 
 void main() {
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(title: 'Flutter Demo', 
-    home: Event(),
+    home: ConnectBankScreen(),
     debugShowCheckedModeBanner: false,);
   }
 }
