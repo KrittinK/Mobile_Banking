@@ -99,8 +99,12 @@ class Event extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Events'),
-          backgroundColor: Colors.red,
+          title: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child:  Text('Events'),
+          ),
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.grey[800],
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
