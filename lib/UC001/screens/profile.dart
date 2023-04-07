@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/UC001/controllers/profile_controller.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -9,6 +10,8 @@ class Profile extends StatelessWidget {
     String email = 'pdangkaj@cmkl.ac.th';
     String phone = '092-XXX-XXXX';
     String address = 'Silom, Bangkok';
+    final controller = ProfileController();
+
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -71,37 +74,46 @@ class Profile extends StatelessWidget {
                     constraints: const BoxConstraints(),
                     padding: const EdgeInsets.all(30.0),
                     margin: const EdgeInsets.all(5.0),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text('Personal Info',
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                color: Colors.grey,
-                              )),
-                          const SizedBox(height: 20),
-                          Text('Class: $classYear'),
-                          const SizedBox(height: 20),
-                          Text('E-mail: $email'),
-                          const SizedBox(height: 20),
-                          Text('Phone: $phone'),
-                          const SizedBox(height: 20),
-                          Text('Address: $address'),
-                          const SizedBox(height: 20),
-                          Row(
-                            children: const [
-                              Text('Active'),
-                              Icon(Icons.circle,
-                                  size: 20, color: Colors.lightGreen),
-                              Text('/'),
-                              Text('Offline'),
-                              Icon(Icons.circle, size: 20, color: Colors.grey),
-                              Text('/'),
-                              Text('Do Not Disturb'),
-                              Icon(Icons.circle, size: 20, color: Colors.red),
-                            ],
-                          ),
-                        ])),
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      const Text('Personal Info',
+                          style: TextStyle(
+                            fontSize: 15.0,
+                            color: Colors.grey,
+                          )),
+                      const SizedBox(height: 20),
+                      FutureBuilder(
+                        future: controller.getBookId(bookId: 'JHN'),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            return Text(snapshot.data!);
+                          } else if (snapshot.hasError) {
+                            return Text('${snapshot.error}');
+                          } else {
+                            return const CircularProgressIndicator();
+                          }
+                        },
+                      ),
+                      Text('Class: $classYear'),
+                      const SizedBox(height: 20),
+                      Text('E-mail: $email'),
+                      const SizedBox(height: 20),
+                      Text('Phone: $phone'),
+                      const SizedBox(height: 20),
+                      Text('Address: $address'),
+                      const SizedBox(height: 20),
+                      Row(
+                        children: const [
+                          Text('Active'),
+                          Icon(Icons.circle, size: 20, color: Colors.lightGreen),
+                          Text('/'),
+                          Text('Offline'),
+                          Icon(Icons.circle, size: 20, color: Colors.grey),
+                          Text('/'),
+                          Text('Do Not Disturb'),
+                          Icon(Icons.circle, size: 20, color: Colors.red),
+                        ],
+                      ),
+                    ])),
               ],
             ),
           ],
