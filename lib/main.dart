@@ -8,8 +8,7 @@ import 'package:flutter_template/UC001/screens/payment_options2.dart';
 import 'package:flutter_template/UC001/screens/type_of_payment.dart';
 import 'package:flutter_template/UC001/screens/profile.dart';
 import 'package:flutter_template/UC001/screens/event.dart';
-
-
+import 'package:flutter_template/UC001/screens/qr_code_payment.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,8 +19,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: 'Flutter Demo', 
-    home: Event(),
-    debugShowCheckedModeBanner: false,);
+    return const MaterialApp(
+      title: 'Flutter Demo',
+      home: Event(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
