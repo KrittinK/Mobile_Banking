@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/UC001/screens/children_screen.dart';
 import 'package:flutter_template/UC001/screens/login_screen.dart';
 import 'package:flutter_template/UC001/screens/notifications_screen.dart';
 import 'package:flutter_template/UC001/screens/payment_screen.dart';
@@ -27,5 +28,8 @@ class MyApp extends StatelessWidget {
       home: Event(),
       debugShowCheckedModeBanner: false,
     );
+    return const MaterialApp(title: 'Flutter Demo', 
+    home: ChildrenScreen(),
+    debugShowCheckedModeBanner: false,);
   }
 }
