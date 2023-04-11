@@ -25,15 +25,22 @@ import 'package:http/http.dart' as http;
 
 class GetBookDataService {
   Future<List<Book>> getbookdata() async {
-    final response = await http.get(Uri.parse('https://bible-api.com/john 3:16'));
+    final response =
+        await http.get(Uri.parse('https://bible-api.com/john 3:16'));
     if (response.statusCode == 200) {
       final data = response.body;
       final jsonData = jsonDecode(data);
+      print('connected');
       // print(jsonData['verses']);
 
-      final List<Book> bookDataList = jsonData['verses'].map<Book>((book) => Book.fromJson(book)).toList();
+      final List<Book> bookDataList =
+          jsonData['verses'].map<Book>((book) => Book.fromJson(book)).toList();
 
-      final bookDataList3 = [Book(book_id: '1'), Book(book_id: '2'), Book(book_id: '3')];
+      final bookDataList3 = [
+        Book(book_id: '1'),
+        Book(book_id: '2'),
+        Book(book_id: '3')
+      ];
 
       // List<Book> bookDataList2 = [];
       // for (final book in jsonData['verses']) {

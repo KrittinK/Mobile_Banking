@@ -1,0 +1,32 @@
+{
+  "Event": 
+    {
+      "photo": "photo",
+      "header": "header",
+      "body": "body",
+      "description": "blah blah blah"
+    },
+  "Student1" : 
+  {
+    "Grade" : 
+    { 
+      "GPA" : "3.0",
+      "Credits" : "57"
+    },
+    "Profile" : 
+    { 
+      "name" : "Panupong Dangkajitpetch",
+      "class" : "Year 1",
+      "email" : "pdangkaj@cmkl.ac.th",
+      "phone" : "092-XXX-XXXX",
+      "address" : "Siam"
+    },
+    "Payment" : 
+    { 
+      "profilePicture" : "photo",
+      "name" : "parent"
+    }
+  }
+}
+
+            

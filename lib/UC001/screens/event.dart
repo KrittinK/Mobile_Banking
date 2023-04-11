@@ -3,16 +3,19 @@ import 'package:flutter/material.dart';
 final List _images = [
   'images/event1.png',
   'images/event2.png',
+  'images/event1.png',
 ];
 
 final List _header = [
   'A Distribute Computing Framework Mini Training',
   'TECH TALK 2023 AIEI x NVIDIA',
+  'asdfsdafasdfasdfsdfsdfsfasfasdfasdfasdfasf',
 ];
 
 final List _body = [
   'Date: 9 March 2023 Time: 12-1pm Location: 607 Sandbox',
   'Date: 14 March 2023 Time: 10.30-12 pm Location: LIVE on Zoom',
+  'Date: 9 March 2023 Time: 12-1pm Location: 607 Sandbox',
 ];
 
 final List _description = [
@@ -22,7 +25,8 @@ final List _description = [
       'skill card in SYS-304: Scalable Algorithms and Infrastructure Competency.',
   '📣 Calling all engineering students and faculty! Dive into the topic of large'
       'language models (LLM) which are made of billions of parameters and open a wide'
-      'range of new applications, including natural language processing, human-machine interactions, generative AI, and healthcare applications.'
+      'range of new applications, including natural language processing, human-machine interactions, generative AI, and healthcare applications.',
+  'Sally heloajsofpoasdjfadsjfpas jsjfosjafpasj pfso fasdjf',
 ];
 
 class Event extends StatelessWidget {
@@ -101,7 +105,7 @@ class Event extends StatelessWidget {
         appBar: AppBar(
           title: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
-            child:  Text('Events'),
+            child: Text('Events'),
           ),
           backgroundColor: Colors.white,
           foregroundColor: Colors.grey[800],
