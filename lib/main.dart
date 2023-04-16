@@ -11,8 +11,8 @@ import 'package:flutter_template/UC001/screens/profile.dart';
 import 'package:flutter_template/UC001/screens/event.dart';
 import 'package:flutter_template/UC001/screens/connect_with_bank_screen.dart';
 import 'package:flutter_template/UC001/screens/transfer_completed.dart';
-
-
+import 'package:flutter_template/UC001/screens/home.dart';
+import 'package:flutter_template/UC001/screens/selection.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +23,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return const MaterialApp(
+      title: 'Flutter Demo',
+      home: Event(),
+      debugShowCheckedModeBanner: false,
+    );
     return const MaterialApp(title: 'Flutter Demo', 
     home: Profile(),
     debugShowCheckedModeBanner: false,);
