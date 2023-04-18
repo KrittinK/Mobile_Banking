@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: Event(),
+      home: Profile(),
       debugShowCheckedModeBanner: false,
     );
     return const MaterialApp(title: 'Flutter Demo', 

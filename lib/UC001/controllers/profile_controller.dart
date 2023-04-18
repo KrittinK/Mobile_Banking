@@ -34,4 +34,16 @@ class ProfileController {
     return studentId;
   }
 
+  Future<String?> getStudentLastName({
+    required String studentId,
+  }) async {
+    final studentDataList = await GetStudentDataService().getstudentdata();
+
+    for (final student in studentDataList) {
+      if (student.id == studentId) return student.last_name;
+    }
+  
+    return studentId;
+  }
+
 }

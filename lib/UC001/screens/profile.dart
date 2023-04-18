@@ -85,7 +85,8 @@ class Profile extends StatelessWidget {
                         future: controller.getStudentName(studentId: '123435'),
                         builder: (context, snapshot) {
                           if (snapshot.hasData) {
-                            return Text(snapshot.data!);
+                            String lastName = snapshot.data as String;
+                            return Text("First Name: $lastName");
                           } else if (snapshot.hasError) {
                             return Text('${snapshot.error}');
                           } else {
@@ -93,6 +94,21 @@ class Profile extends StatelessWidget {
                           }
                         },
                       ),
+                      const SizedBox(height: 20),
+                      FutureBuilder(
+                        future: controller.getStudentLastName(studentId: '123435'),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            String lastName = snapshot.data as String;
+                            return Text("Last Name: $lastName");
+                          } else if (snapshot.hasError) {
+                            return Text('${snapshot.error}');
+                          } else {
+                            return const CircularProgressIndicator();
+                          }
+                        },
+                      ),
+                      const SizedBox(height: 20),
                       Text('Class: $classYear'),
                       const SizedBox(height: 20),
                       Text('E-mail: $email'),
