@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/UC001/screens/selection.dart';
 
 class BuildChildren extends StatelessWidget {
   const BuildChildren({Key? key, required this.name, required this.image})
@@ -13,7 +14,13 @@ class BuildChildren extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
       child: ElevatedButton(
         onPressed: () {
-          // Your function to execute when the button is pressed
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context) {
+                return const Selection();
+              },
+            ),
+          );
         },
         style: ElevatedButton.styleFrom(
           elevation: 8,
@@ -63,15 +70,14 @@ class ChildrenScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text(
-                  'Your Children',
-                  style: TextStyle(fontSize: 23),
-                ),
-                SizedBox(width: 59),
-              ]),
+          title:
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+            Text(
+              'Your Children',
+              style: TextStyle(fontSize: 23),
+            ),
+            SizedBox(width: 59),
+          ]),
           toolbarHeight: 80,
           elevation: 0.0,
           backgroundColor: Colors.transparent,

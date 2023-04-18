@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/UC001/screens/qr_code_payment.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({Key? key}) : super(key: key);
@@ -8,7 +9,8 @@ class PaymentScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+          title:
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
             Text(
               'Credit Card',
               style: TextStyle(fontSize: 23),
@@ -158,8 +160,9 @@ class PaymentScreen extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 22.0).add
-                  (const EdgeInsets.all(20),),
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0).add(
+                    const EdgeInsets.all(20),
+                  ),
                   child: SizedBox(
                     width: 125,
                     height: 50,
@@ -210,22 +213,28 @@ class PaymentScreen extends StatelessWidget {
               height: 45,
             ),
             SizedBox(
-                width: 261,
-                height: 60,
-                child: ElevatedButton(
-                  onPressed: () {
-                    debugPrint('Next button pressed');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    backgroundColor: Colors.red[700],
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
+              width: 261,
+              height: 60,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return const QRCodePayment();
+                      },
                     ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.red[800],
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                  child: const Text('Next'),
                 ),
+                child: const Text('Next'),
               ),
+            ),
           ],
         ),
       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/UC001/screens/event.dart';
-import 'package:flutter_template/UC001/screens/profile.dart';
+import 'package:flutter_template/UC001/screens/children_screen.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -11,7 +10,7 @@ class Home extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Notifications'),
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.red[800],
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
@@ -26,7 +25,7 @@ class Home extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return const Profile();
+                      return const ChildrenScreen();
                     },
                   ),
                 );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/UC001/screens/type_of_payment.dart';
 
 class PaymentOptions extends StatefulWidget {
   const PaymentOptions({super.key});
@@ -31,7 +32,7 @@ class _PaymentOptions extends State<PaymentOptions> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Notifications'),
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.red[800],
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
@@ -53,7 +54,7 @@ class _PaymentOptions extends State<PaymentOptions> {
                     backgroundColor: Colors.grey[300],
                     headerBuilder: (BuildContext context, bool isExpanded) {
                       return Container(
-                        color: Colors.red,
+                        color: Colors.red[800],
                         height: 100.0,
                         padding: const EdgeInsets.all(25.0),
                         margin: const EdgeInsets.all(5.0),
@@ -77,9 +78,13 @@ class _PaymentOptions extends State<PaymentOptions> {
                                 children: [
                                   GestureDetector(
                                     onTap: () {
-                                      //navigator push to type_of_payment.dart page
-                                      Navigator.pushNamed(
-                                          context, '/type_of_payment');
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (BuildContext context) {
+                                            return const TypeOfPayment();
+                                          },
+                                        ),
+                                      );
                                     },
                                     child: const Text('Select',
                                         style: TextStyle(color: Colors.white)),

@@ -8,7 +8,8 @@ class QRCodePayment extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+          title:
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
             Text(
               'QR Code ',
               style: TextStyle(fontSize: 23),
@@ -48,7 +49,7 @@ class QRCodePayment extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            BuildText(text: 'Account Number:  XXX-XXX-XXXX'),  
+            BuildText(text: 'Account Number:  XXX-XXX-XXXX'),
             const SizedBox(
               height: 155,
             ),
@@ -75,7 +76,7 @@ Widget buildElevatedButton({
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           foregroundColor: Colors.white,
-          backgroundColor: Colors.red[700],
+          backgroundColor: Colors.red[800],
           textStyle: const TextStyle(fontSize: 18),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
