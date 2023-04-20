@@ -42,7 +42,7 @@ class _PaymentOptions extends State<PaymentOptions> {
         ),
         body: ListView(
           children: [
-            const SizedBox(height: 10),
+            const SizedBox(height: 50),
             ExpansionPanelList(
               expansionCallback: (int index, bool isExpanded) {
                 setState(() {
@@ -68,11 +68,23 @@ class _PaymentOptions extends State<PaymentOptions> {
                                 )),
                             const Spacer(),
                             Container(
-                              height: 30,
-                              width: 60,
+                              height: 40,
+                              width: 70,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Colors.red[900]),
+                                borderRadius: BorderRadius.circular(10),
+                                color: Colors.red[900],
+                                border: Border.all(
+                                  color: Colors.white,
+                                  width: 2,
+                                ),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Color.fromARGB(255, 50, 44, 44),
+                                    blurRadius: 4,
+                                    offset: Offset(4, 8), // Shadow position
+                                  ),
+                                ],
+                              ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [

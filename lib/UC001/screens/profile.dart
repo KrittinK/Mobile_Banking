@@ -74,62 +74,67 @@ class Profile extends StatelessWidget {
                     constraints: const BoxConstraints(),
                     padding: const EdgeInsets.all(30.0),
                     margin: const EdgeInsets.all(5.0),
-                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      const Text('Personal Info',
-                          style: TextStyle(
-                            fontSize: 15.0,
-                            color: Colors.grey,
-                          )),
-                      const SizedBox(height: 20),
-                      FutureBuilder(
-                        future: controller.getStudentName(studentId: '123435'),
-                        builder: (context, snapshot) {
-                          if (snapshot.hasData) {
-                            String lastName = snapshot.data as String;
-                            return Text("First Name: $lastName");
-                          } else if (snapshot.hasError) {
-                            return Text('${snapshot.error}');
-                          } else {
-                            return const CircularProgressIndicator();
-                          }
-                        },
-                      ),
-                      const SizedBox(height: 20),
-                      FutureBuilder(
-                        future: controller.getStudentLastName(studentId: '123435'),
-                        builder: (context, snapshot) {
-                          if (snapshot.hasData) {
-                            String lastName = snapshot.data as String;
-                            return Text("Last Name: $lastName");
-                          } else if (snapshot.hasError) {
-                            return Text('${snapshot.error}');
-                          } else {
-                            return const CircularProgressIndicator();
-                          }
-                        },
-                      ),
-                      const SizedBox(height: 20),
-                      Text('Class: $classYear'),
-                      const SizedBox(height: 20),
-                      Text('E-mail: $email'),
-                      const SizedBox(height: 20),
-                      Text('Phone: $phone'),
-                      const SizedBox(height: 20),
-                      Text('Address: $address'),
-                      const SizedBox(height: 20),
-                      Row(
-                        children: const [
-                          Text('Active'),
-                          Icon(Icons.circle, size: 20, color: Colors.lightGreen),
-                          Text('/'),
-                          Text('Offline'),
-                          Icon(Icons.circle, size: 20, color: Colors.grey),
-                          Text('/'),
-                          Text('Do Not Disturb'),
-                          Icon(Icons.circle, size: 20, color: Colors.red),
-                        ],
-                      ),
-                    ])),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text('Personal Info',
+                              style: TextStyle(
+                                fontSize: 15.0,
+                                color: Colors.grey,
+                              )),
+                          const SizedBox(height: 20),
+                          FutureBuilder(
+                            future:
+                                controller.getStudentName(studentId: '123435'),
+                            builder: (context, snapshot) {
+                              if (snapshot.hasData) {
+                                String lastName = snapshot.data as String;
+                                return Text("First Name: $lastName");
+                              } else if (snapshot.hasError) {
+                                return Text('${snapshot.error}');
+                              } else {
+                                return const CircularProgressIndicator();
+                              }
+                            },
+                          ),
+                          const SizedBox(height: 20),
+                          FutureBuilder(
+                            future: controller.getStudentLastName(
+                                studentId: '123435'),
+                            builder: (context, snapshot) {
+                              if (snapshot.hasData) {
+                                String lastName = snapshot.data as String;
+                                return Text("Last Name: $lastName");
+                              } else if (snapshot.hasError) {
+                                return Text('${snapshot.error}');
+                              } else {
+                                return const CircularProgressIndicator();
+                              }
+                            },
+                          ),
+                          const SizedBox(height: 20),
+                          Text('Class: $classYear'),
+                          const SizedBox(height: 20),
+                          Text('E-mail: $email'),
+                          const SizedBox(height: 20),
+                          Text('Phone: $phone'),
+                          const SizedBox(height: 20),
+                          Text('Address: $address'),
+                          const SizedBox(height: 20),
+                          Row(
+                            children: const [
+                              Text('Active'),
+                              Icon(Icons.circle,
+                                  size: 20, color: Colors.lightGreen),
+                              Text('/'),
+                              Text('Offline'),
+                              Icon(Icons.circle, size: 20, color: Colors.grey),
+                              Text('/'),
+                              Text('Do Not Disturb'),
+                              Icon(Icons.circle, size: 20, color: Colors.red),
+                            ],
+                          ),
+                        ])),
               ],
             ),
           ],

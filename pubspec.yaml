@@ -70,6 +70,21 @@ flutter:
     - images/QRExample.png
     - images/Payment.png
     - images/Children.png
+    - images/home/payment.png
+    - images/home/transfer.png
+    - images/home/university.png
+    - images/home/withdraw.png
+    - images/home/statement.png
+    - images/home/grade.png
+    - images/home/event.png
+    - images/home/contact.png
+    - images/home/event3.png
+    - images/home/event4.png
+    - images/home/event5.png
+    - images/home/home.png
+    - images/home/banking.png
+    - images/home/scan.png
+    - images/home/more.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

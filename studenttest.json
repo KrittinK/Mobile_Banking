@@ -1,0 +1,36 @@
+[
+    {
+        "id": "clgd8bvmf0000e2pitvpe1eh6",
+        "create_at": "2023-04-12T05:06:54.807Z",
+        "updated_at": "2023-04-12T05:06:54.808Z",
+        "email": "123@KINGG",
+        "Student": [
+            {
+                "id": "123435",
+                "create_at": "2023-04-12T05:07:35.121Z",
+                "updated_at": "2023-04-12T05:07:35.122Z",
+                "first_name": "C",
+                "last_name": "D",
+                "parent_id": "clgd8bvmf0000e2pitvpe1eh6",
+                "parent": null
+            }
+        ]
+    },
+    {
+        "id": "parent2",
+        "create_at": "2023-04-12T05:06:54.807Z",
+        "updated_at": "2023-04-12T05:06:54.808Z",
+        "email": "123@KINGG",
+        "Student2": [
+            {
+                "id": "123435",
+                "create_at": "2023-04-12T05:07:35.121Z",
+                "updated_at": "2023-04-12T05:07:35.122Z",
+                "first_name": "C",
+                "last_name": "D",
+                "parent_id": "clgd8bvmf0000e2pitvpe1eh6",
+                "parent": null
+            }
+        ]
+    }
+]
