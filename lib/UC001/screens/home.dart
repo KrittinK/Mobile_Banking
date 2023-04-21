@@ -86,7 +86,6 @@ class Home extends StatelessWidget {
             ],
           ),
         ),
-        floatingActionButton: const FloatingActionButton(onPressed: null),
         body: Column(
           children: [
             Container(
