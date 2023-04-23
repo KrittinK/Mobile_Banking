@@ -3,9 +3,34 @@ import 'package:flutter_template/UC001/controllers/profile_controller.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
+
+  //make function to call FutureBuilder and return String
+  FutureBuilder<String?> FutureFirstName({
+    required String studentId,
+    required ProfileController controller,
+  }) =>
+      FutureBuilder(
+        future: controller.getStudentFirstName(studentId: studentId),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            String firstName = snapshot.data as String;
+            return Text(firstName,
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ));
+          } else if (snapshot.hasError) {
+            return Text('${snapshot.error}');
+          } else {
+            return const CircularProgressIndicator();
+          }
+        },
+      );
+
   @override
   Widget build(BuildContext context) {
-    String userName = 'PANUPONG DANGKAJITPETCH';
+    //String userName = 'v';
     String classYear = 'Year 1';
     String email = 'pdangkaj@cmkl.ac.th';
     String phone = '092-XXX-XXXX';
@@ -62,12 +87,8 @@ class Profile extends StatelessWidget {
                   padding: const EdgeInsets.all(30.0),
                   margin: const EdgeInsets.all(5.0),
                   child: Center(
-                      child: Text(userName,
-                          style: const TextStyle(
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ))),
+                      child: FutureFirstName(
+                          studentId: '1234567890', controller: controller)),
                 ),
                 Container(
                     color: Colors.grey[300],
@@ -88,8 +109,8 @@ class Profile extends StatelessWidget {
                                 studentId: '1234567890'),
                             builder: (context, snapshot) {
                               if (snapshot.hasData) {
-                                String lastName = snapshot.data as String;
-                                return Text("First Name: $lastName");
+                                String firstName = snapshot.data as String;
+                                return Text("First Name: $firstName");
                               } else if (snapshot.hasError) {
                                 return Text('${snapshot.error}');
                               } else {

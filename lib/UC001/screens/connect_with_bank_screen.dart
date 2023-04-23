@@ -15,7 +15,8 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+          title:
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
             Text(
               'Connect with bank',
               style: TextStyle(fontSize: 23),
@@ -52,13 +53,15 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
               height: 15,
             ),
             BuildExpandedText(
-              text: 'Details: __________________________________________________________________________________________________________________________________________________________________________________________________________________',
+              text:
+                  'Details: __________________________________________________________________________________________________________________________________________________________________________________________________________________',
             ),
             const SizedBox(
               height: 25,
             ),
             BuildExpandedText(
-              text: 'Pay 150,000 3 times every 3 months __________________________________________________________________________________________________________________________________________________________________________________________________________',
+              text:
+                  'Pay 150,000 3 times every 3 months __________________________________________________________________________________________________________________________________________________________________________________________________________',
             ),
             const SizedBox(
               height: 25,
@@ -66,7 +69,7 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
             const SizedBox(
               height: 20,
             ),
-             Row(
+            Row(
               children: [
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 12.0),
@@ -84,12 +87,12 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
                   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   visualDensity: VisualDensity.compact,
                   checkColor: Colors.white, // change the color of the checkmark
-                  fillColor: MaterialStateProperty.all<Color>(Colors.grey[600]!), // change the background color of the checkbox
+                  fillColor: MaterialStateProperty.all<Color>(Colors.grey[
+                      600]!), // change the background color of the checkbox
                 ),
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 0.0),
-                  child: 
-                  Text(
+                  child: Text(
                     'I agree to the terms and conditions',
                     style: TextStyle(fontSize: 15),
                   ),
@@ -99,7 +102,7 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
             const SizedBox(
               height: 40,
             ),
-           Row(
+            Row(
               children: [
                 const SizedBox(
                   width: 300,
@@ -107,15 +110,15 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    shape: const CircleBorder(), 
+                    shape: const CircleBorder(),
                     padding: const EdgeInsets.all(20),
                     backgroundColor: Colors.red[800],
                     foregroundColor: Colors.black,
                   ),
-                  child: const Icon( 
+                  child: const Icon(
                     Icons.arrow_forward,
                     color: Colors.white,
-                    size: 35,
+                    size: 30,
                   ),
                 ),
               ],

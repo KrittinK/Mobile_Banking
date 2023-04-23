@@ -220,15 +220,15 @@ class PaymentScreen extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    shape: const CircleBorder(), 
+                    shape: const CircleBorder(),
                     padding: const EdgeInsets.all(20),
                     backgroundColor: Colors.red[800],
                     foregroundColor: Colors.black,
                   ),
-                  child: const Icon( 
+                  child: const Icon(
                     Icons.arrow_forward,
                     color: Colors.white,
-                    size: 35,
+                    size: 30,
                   ),
                 ),
               ],
