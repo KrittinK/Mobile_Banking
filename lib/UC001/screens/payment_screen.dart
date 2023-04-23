@@ -19,8 +19,8 @@ class PaymentScreen extends StatelessWidget {
           ]),
           toolbarHeight: 80,
           elevation: 0.0,
-          backgroundColor: Colors.transparent,
-          foregroundColor: Colors.grey[800],
+          backgroundColor: const Color.fromARGB(255, 224, 108, 87),
+          foregroundColor: Colors.white,
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
@@ -212,28 +212,26 @@ class PaymentScreen extends StatelessWidget {
             const SizedBox(
               height: 45,
             ),
-            SizedBox(
-              width: 261,
-              height: 60,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (BuildContext context) {
-                        return const QRCodePayment();
-                      },
-                    ),
-                  );
-                },
-                style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.white,
-                  backgroundColor: Colors.red[800],
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
+            Row(
+              children: [
+                const SizedBox(
+                  width: 300,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    shape: const CircleBorder(), 
+                    padding: const EdgeInsets.all(20),
+                    backgroundColor: Colors.red[800],
+                    foregroundColor: Colors.black,
+                  ),
+                  child: const Icon( 
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                    size: 35,
                   ),
                 ),
-                child: const Text('Next'),
-              ),
+              ],
             ),
           ],
         ),
