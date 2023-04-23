@@ -18,8 +18,8 @@ class QRCodePayment extends StatelessWidget {
           ]),
           toolbarHeight: 80,
           elevation: 0.0,
-          backgroundColor: Colors.transparent,
-          foregroundColor: Colors.grey[800],
+          backgroundColor: const Color.fromARGB(255, 224, 108, 87),
+          foregroundColor: Colors.white,
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
@@ -36,8 +36,8 @@ class QRCodePayment extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 40.0),
                   child: Image.asset(
                     'images/QRExample.png',
-                    height: 200,
-                    width: 200,
+                    height: 250,
+                    width: 250,
                   ),
                 ),
               ],
@@ -103,7 +103,7 @@ Widget BuildText({
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: Text(
             (text),
-            style: const TextStyle(fontSize: 15),
+            style: const TextStyle(fontSize: 20),
           ),
         ),
       ],
