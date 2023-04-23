@@ -84,8 +84,8 @@ class Profile extends StatelessWidget {
                               )),
                           const SizedBox(height: 20),
                           FutureBuilder(
-                            future:
-                                controller.getStudentName(studentId: '123435'),
+                            future: controller.getStudentFirstName(
+                                studentId: '1234567890'),
                             builder: (context, snapshot) {
                               if (snapshot.hasData) {
                                 String lastName = snapshot.data as String;
@@ -100,7 +100,7 @@ class Profile extends StatelessWidget {
                           const SizedBox(height: 20),
                           FutureBuilder(
                             future: controller.getStudentLastName(
-                                studentId: '123435'),
+                                studentId: '1234567890'),
                             builder: (context, snapshot) {
                               if (snapshot.hasData) {
                                 String lastName = snapshot.data as String;

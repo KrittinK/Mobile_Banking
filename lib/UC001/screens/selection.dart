@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/UC001/screens/children_screen.dart';
 import 'package:flutter_template/UC001/screens/event.dart';
 import 'package:flutter_template/UC001/screens/notifications_screen.dart';
 import 'package:flutter_template/UC001/screens/payment_options.dart';
@@ -8,7 +7,7 @@ import 'package:flutter_template/UC001/screens/grade.dart';
 
 class Selection extends StatelessWidget {
   const Selection({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -22,7 +21,13 @@ class Selection extends StatelessWidget {
                 icon: const Icon(Icons.account_circle_rounded),
                 iconSize: 35,
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return const Profile();
+                      },
+                    ),
+                  );
                 },
               ),
               const Spacer(flex: 1),
@@ -30,7 +35,13 @@ class Selection extends StatelessWidget {
                 icon: const Icon(Icons.notifications),
                 iconSize: 35,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/editProfile');
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return const NotificationsScreen();
+                      },
+                    ),
+                  );
                 },
               ),
             ],

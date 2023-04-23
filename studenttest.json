@@ -9,26 +9,45 @@
                 "id": "123435",
                 "create_at": "2023-04-12T05:07:35.121Z",
                 "updated_at": "2023-04-12T05:07:35.122Z",
+                "GPA": null,
+                "Credits": null,
                 "first_name": "C",
                 "last_name": "D",
+                "Class": null,
+                "Email": null,
+                "Phone": null,
+                "Address": null,
                 "parent_id": "clgd8bvmf0000e2pitvpe1eh6",
                 "parent": null
-            }
-        ]
-    },
-    {
-        "id": "parent2",
-        "create_at": "2023-04-12T05:06:54.807Z",
-        "updated_at": "2023-04-12T05:06:54.808Z",
-        "email": "123@KINGG",
-        "Student2": [
+            },
             {
-                "id": "123435",
-                "create_at": "2023-04-12T05:07:35.121Z",
-                "updated_at": "2023-04-12T05:07:35.122Z",
-                "first_name": "C",
-                "last_name": "D",
+                "id": "12345678",
+                "create_at": "2023-04-20T14:56:00.601Z",
+                "updated_at": "2023-04-20T14:56:00.602Z",
+                "GPA": "3.0",
+                "Credits": "60",
+                "first_name": "Krittin",
+                "last_name": "Kamolpornwijit",
+                "Class": "Year 1",
+                "Email": "kkamolpo@cmkl.ac.th",
+                "Phone": "084-231-5677",
+                "Address": "Silom",
                 "parent_id": "clgd8bvmf0000e2pitvpe1eh6",
+                "parent": null
+            },
+            {
+                "id": "1234567890",
+                "create_at": "2023-04-21T05:00:58.077Z",
+                "updated_at": "2023-04-21T05:00:58.079Z",
+                "GPA": "3.0",
+                "Credits": "57",
+                "first_name": "Panupong",
+                "last_name": "Dangkajitpetch",
+                "Class": "Year 1",
+                "Email": "pdangkaj@cmkl.ac.th",
+                "Phone": "092-234-2345",
+                "Address": "Siam",
+                "parent_id": "clgd8bvm`f0000e2pitvpe1eh6",
                 "parent": null
             }
         ]

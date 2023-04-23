@@ -11,7 +11,7 @@ class TypeOfPayment extends StatelessWidget {
     required Widget screen,
   }) =>
       Container(
-        color: Colors.red[800],
+        color: const Color(0xFFD75560),
         height: 100.0,
         padding: const EdgeInsets.all(25.0),
         margin: const EdgeInsets.all(5.0),
@@ -27,7 +27,7 @@ class TypeOfPayment extends StatelessWidget {
             width: 60,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.red[900]),
+                color: const Color(0xFFFFE790)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -42,7 +42,7 @@ class TypeOfPayment extends StatelessWidget {
                     );
                   },
                   child: const Text('Select',
-                      style: TextStyle(color: Colors.white)),
+                      style: TextStyle(color: Colors.black)),
                 ),
               ],
             ),
@@ -55,8 +55,8 @@ class TypeOfPayment extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Notifications'),
-          backgroundColor: Colors.red[800],
+          title: const Text('Type of Payments'),
+          backgroundColor: const Color(0xFFE06C57),
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {

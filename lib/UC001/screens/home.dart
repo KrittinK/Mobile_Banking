@@ -98,7 +98,7 @@ class Home extends StatelessWidget {
                 children: [
                   const SizedBox(height: 20),
                   FutureBuilder(
-                    future: controller.getStudentName(studentId: '123435'),
+                    future: controller.getStudentFirstName(studentId: '123435'),
                     builder: (context, snapshot) {
                       if (snapshot.hasData) {
                         String firstName = snapshot.data as String;
@@ -200,7 +200,7 @@ class Home extends StatelessWidget {
                 width: 500,
                 padding: const EdgeInsets.all(20),
                 child: Expanded(
-                  child: Container(
+                  child: SizedBox(
                     height: 500,
                     width: 500,
                     child: ListView(

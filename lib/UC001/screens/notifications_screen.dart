@@ -8,7 +8,7 @@ class NotificationsScreen extends StatelessWidget {
     required String text,
   }) =>
       Container(
-        color: Colors.red[800],
+        color: const Color(0xFFD75560),
         height: 100.0,
         padding: const EdgeInsets.all(30.0),
         margin: const EdgeInsets.all(5.0),
@@ -31,7 +31,7 @@ class NotificationsScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Notifications'),
-          backgroundColor: Colors.red[800],
+          backgroundColor: const Color(0xFFE06C57),
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
@@ -45,7 +45,7 @@ class NotificationsScreen extends StatelessWidget {
             buildContainer(text: 'Payment Form Sent To You'),
             buildContainer(text: 'Payment Form Sent To Parent'),
             Container(
-              color: Colors.red[800],
+              color: const Color(0xFFD75560),
               height: 100.0,
               padding: const EdgeInsets.all(25.0),
               margin: const EdgeInsets.all(5.0),
@@ -67,7 +67,7 @@ class NotificationsScreen extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
-                    color: Colors.red[800],
+                    color: const Color(0xFFD75560),
                     height: 100.0,
                     padding: const EdgeInsets.all(25.0),
                     margin: const EdgeInsets.all(5.0),

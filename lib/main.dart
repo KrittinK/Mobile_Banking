@@ -14,7 +14,7 @@ import 'package:flutter_template/UC001/screens/transfer_completed.dart';
 import 'package:flutter_template/UC001/screens/home.dart';
 import 'package:flutter_template/UC001/screens/selection.dart';
 import 'package:flutter_template/UC001/screens/grade.dart';
-import 'package:flutter_template/UC001/screens/loading_CMKL.dart';
+import 'package:flutter_template/UC001/screens/loading_cmkl.dart';
 
 void main() {
   runApp(const MyApp());

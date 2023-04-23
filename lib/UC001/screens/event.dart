@@ -107,8 +107,8 @@ class Event extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Text('Events'),
           ),
-          backgroundColor: Colors.white,
-          foregroundColor: Colors.grey[800],
+          backgroundColor: const Color(0xFFE06C57),
+          foregroundColor: Colors.white,
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {

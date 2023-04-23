@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class Grade extends StatefulWidget {
   const Grade({super.key});
   @override
-  _Grade createState() => _Grade();
+  State<Grade> createState() => GradeState();
 }
 
-class _Grade extends State<Grade> {
+class GradeState extends State<Grade> {
   List<ExpansionItem> items = <ExpansionItem>[
     ExpansionItem(header: "Physics", body: '-SCI-105: 3.00\n-SCI-106: 4\n'),
     ExpansionItem(
@@ -55,8 +55,8 @@ class _Grade extends State<Grade> {
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
-            title: const Text('Notifications'),
-            backgroundColor: Colors.red[800],
+            title: const Text('Show Grade'),
+            backgroundColor: const Color(0xFFE06C57),
             leading: IconButton(
               icon: const Icon(Icons.arrow_back),
               onPressed: () {
@@ -67,6 +67,7 @@ class _Grade extends State<Grade> {
           body: SingleChildScrollView(
             child: Column(
               children: [
+                const SizedBox(height: 20),
                 Row(
                   children: [
                     Column(
@@ -106,7 +107,7 @@ class _Grade extends State<Grade> {
                             headerBuilder:
                                 (BuildContext context, bool isExpanded) {
                               return Container(
-                                color: Colors.red[800],
+                                color: const Color(0xFFD75560),
                                 height: 100.0,
                                 padding: const EdgeInsets.all(25.0),
                                 margin: const EdgeInsets.all(5.0),

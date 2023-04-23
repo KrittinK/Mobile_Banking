@@ -4,10 +4,10 @@ import 'package:flutter_template/UC001/screens/type_of_payment.dart';
 class PaymentOptions extends StatefulWidget {
   const PaymentOptions({super.key});
   @override
-  _PaymentOptions createState() => _PaymentOptions();
+  PaymentOptionsState createState() => PaymentOptionsState();
 }
 
-class _PaymentOptions extends State<PaymentOptions> {
+class PaymentOptionsState extends State<PaymentOptions> {
   List<ExpansionItem> items = <ExpansionItem>[
     ExpansionItem(
         header: "3 Years",
@@ -31,8 +31,8 @@ class _PaymentOptions extends State<PaymentOptions> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Notifications'),
-          backgroundColor: Colors.red[800],
+          title: const Text('Payment Options'),
+          backgroundColor: const Color(0xFFE06C57),
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
@@ -54,7 +54,7 @@ class _PaymentOptions extends State<PaymentOptions> {
                     backgroundColor: Colors.grey[300],
                     headerBuilder: (BuildContext context, bool isExpanded) {
                       return Container(
-                        color: Colors.red[800],
+                        color: const Color(0xFFD75560),
                         height: 100.0,
                         padding: const EdgeInsets.all(25.0),
                         margin: const EdgeInsets.all(5.0),
@@ -72,7 +72,7 @@ class _PaymentOptions extends State<PaymentOptions> {
                               width: 70,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Colors.red[900],
+                                color: const Color(0xFFFFE790),
                                 border: Border.all(
                                   color: Colors.white,
                                   width: 2,
@@ -99,7 +99,7 @@ class _PaymentOptions extends State<PaymentOptions> {
                                       );
                                     },
                                     child: const Text('Select',
-                                        style: TextStyle(color: Colors.white)),
+                                        style: TextStyle(color: Colors.black)),
                                   ),
                                 ],
                               ),

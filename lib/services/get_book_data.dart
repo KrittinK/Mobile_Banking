@@ -30,17 +30,17 @@ class GetBookDataService {
     if (response.statusCode == 200) {
       final data = response.body;
       final jsonData = jsonDecode(data);
-      print('connected');
+      //print('connected');
       // print(jsonData['verses']);
 
       final List<Book> bookDataList =
           jsonData['verses'].map<Book>((book) => Book.fromJson(book)).toList();
 
-      final bookDataList3 = [
-        Book(book_id: '1'),
-        Book(book_id: '2'),
-        Book(book_id: '3')
-      ];
+      // final bookDataList3 = [
+      //   Book(bookId: '1'),
+      //   Book(bookId: '2'),
+      //   Book(bookId: '3')
+      // ];
 
       // List<Book> bookDataList2 = [];
       // for (final book in jsonData['verses']) {

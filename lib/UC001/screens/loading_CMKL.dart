@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoadingCMKL extends StatelessWidget {
-  const LoadingCMKL({Key? key}) : super(key: key);
+class LoadingCmkl extends StatelessWidget {
+  const LoadingCmkl({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
