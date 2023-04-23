@@ -24,8 +24,8 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
           ]),
           toolbarHeight: 80,
           elevation: 0.0,
-          backgroundColor: Colors.transparent,
-          foregroundColor: Colors.grey[800],
+          backgroundColor: const Color.fromARGB(255, 224, 108, 87),
+          foregroundColor: Colors.white,
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
@@ -35,8 +35,21 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
         ),
         body: Column(
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 40.0),
+                  child: Image.asset(
+                    'images/Connect_with_bank.png',
+                    height: 200,
+                    width: 200,
+                  ),
+                ),
+              ],
+            ),
             const SizedBox(
-              height: 50,
+              height: 15,
             ),
             BuildExpandedText(
               text: 'Details: __________________________________________________________________________________________________________________________________________________________________________________________________________________',
@@ -84,11 +97,28 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
               ],
             ),
             const SizedBox(
-              height: 150,
+              height: 40,
             ),
-            buildElevatedButton(text: 'Next', onPressed: () {}),
-            const SizedBox(
-              height: 25,
+           Row(
+              children: [
+                const SizedBox(
+                  width: 300,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    shape: const CircleBorder(), 
+                    padding: const EdgeInsets.all(20),
+                    backgroundColor: Colors.red[800],
+                    foregroundColor: Colors.black,
+                  ),
+                  child: const Icon( 
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                    size: 35,
+                  ),
+                ),
+              ],
             ),
           ],
         ),

@@ -13,37 +13,59 @@ class TransferCompleteScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+            Text(
+              'Payment Successful',
+              style: TextStyle(fontSize: 23),
+            ),
+            SizedBox(width: 59),
+          ]),
+          toolbarHeight: 80,
+          elevation: 0.0,
+          backgroundColor: const Color.fromARGB(255, 224, 108, 87),
+          foregroundColor: Colors.white,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ),
         body: Column(
           children: [
-            const SizedBox( 
-              height: 40,
+            const SizedBox(
+              height: 10,
             ),
-            BuildHeader(text: 'Transfer Completed'),
+            // BuildHeader(text: 'Transfer Completed'),
             //print the present time here
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 35.0),
-                  child: Text(
-                    '$currentDate $currentYear $currentTime',
-                    style: const TextStyle(fontSize: 18),
-                  ),
-                ),
-              ],
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.start,
+            //   children: [
+            //     Padding(
+            //       padding: const EdgeInsets.symmetric(horizontal: 35.0),
+            //       child: Text(
+            //         '$currentDate $currentYear $currentTime',
+            //         style: const TextStyle(fontSize: 18),
+            //       ),
+            //     ),
+            //   ],
+            // ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 40.0),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(40.0),
                   child: Image.asset(
-                    'images/Payment.png',
-                    height: 400,
-                    width: 400,
+                    'images/paymentsuc.png',
+                    height: 525,
+                    width: 410,
                   ),
-                ),
+                )
               ],
+            ),
+            const SizedBox(
+              height: 20,
             ),
             // Column(
             //   children: [
@@ -62,7 +84,7 @@ class TransferCompleteScreen extends StatelessWidget {
             //     const SizedBox(
             //       height: 25,
             //     ),
-            //     BuildText(text: 'Note: first payment'),  
+            //     BuildText(text: 'Note: first payment'),
             //     const SizedBox(image.png
             //       height: 25,
             //     ),
@@ -124,9 +146,8 @@ Widget BuildText({
       ],
     );
 
-
-    // ignore: non_constant_identifier_names
-    Widget BuildHeader({
+// ignore: non_constant_identifier_names
+Widget BuildHeader({
   required String text,
 }) =>
     Row(
