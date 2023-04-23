@@ -9,10 +9,12 @@ class PaymentOptions2 extends StatelessWidget {
     required BuildContext context,
   }) =>
       Container(
-        color: const Color(0xFFD75560),
         height: 100.0,
         padding: const EdgeInsets.all(25.0),
         margin: const EdgeInsets.all(5.0),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            color: const Color(0xFFD75560)),
         child: Row(children: [
           Text(text,
               style: const TextStyle(
