@@ -5,9 +5,9 @@ import 'package:flutter_template/UC001/screens/payment_options.dart';
 import 'package:flutter_template/UC001/screens/profile.dart';
 import 'package:flutter_template/UC001/screens/grade.dart';
 
-class Selection extends StatelessWidget {
-  const Selection({super.key});
-  
+class Overview extends StatelessWidget {
+  const Overview({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

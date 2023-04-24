@@ -6,18 +6,55 @@ class NotificationsScreen extends StatelessWidget {
 
   Widget buildContainer({
     required String text,
+    required IconData icon,
+    required double size,
+    required Color color,
   }) =>
       Container(
         color: const Color(0xFFD75560),
         height: 100.0,
-        padding: const EdgeInsets.all(30.0),
+        padding: const EdgeInsets.all(25.0),
         margin: const EdgeInsets.all(5.0),
-        child: Center(
-            child: Text(text,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Icon(
+              icon,
+              size: size,
+              color: color,
+            ),
+            const SizedBox(width: 20),
+            Text(text,
                 style: const TextStyle(
                   fontSize: 20.0,
                   color: Colors.white,
-                ))),
+                )),
+          ],
+        ),
+      );
+
+  Widget buildContainerImage({
+    required String text,
+    required String image,
+    required Color color,
+  }) =>
+      Container(
+        color: const Color(0xFFD75560),
+        height: 100.0,
+        padding: const EdgeInsets.all(25.0),
+        margin: const EdgeInsets.all(5.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Image.asset(image),
+            const SizedBox(width: 20),
+            Text(text,
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.white,
+                )),
+          ],
+        ),
       );
 
   @override
@@ -42,27 +79,19 @@ class NotificationsScreen extends StatelessWidget {
         body: Column(
           children: [
             const SizedBox(height: 20),
-            buildContainer(text: 'Payment Form Sent To You'),
-            buildContainer(text: 'Payment Form Sent To Parent'),
-            Container(
-              color: const Color(0xFFD75560),
-              height: 100.0,
-              padding: const EdgeInsets.all(25.0),
-              margin: const EdgeInsets.all(5.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
-                  Icon(Icons.check_circle_outline,
-                      size: 40, color: Colors.green),
-                  SizedBox(width: 20),
-                  Text('Payment Success!',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
-                      )),
-                ],
-              ),
-            ),
+            buildContainerImage(
+                text: 'Payment Form Sent To Parent',
+                image: 'images/Events/payment_form.png',
+                color: const Color(0xFF313C42)),
+            buildContainerImage(
+                text: 'Payment Form Sent To Parent',
+                image: 'images/Events/payment_form.png',
+                color: const Color(0xFF313C42)),
+            buildContainer(
+                text: 'Payment Success!',
+                icon: Icons.check_circle_outline_rounded,
+                size: 40,
+                color: Colors.green),
             Row(
               children: [
                 Expanded(
@@ -75,7 +104,7 @@ class NotificationsScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         const Icon(Icons.event_note,
-                            size: 40, color: Colors.white),
+                            size: 40, color: Color(0xFF313C42)),
                         const SizedBox(width: 20),
                         Column(
                           children: [

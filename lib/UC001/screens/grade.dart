@@ -25,6 +25,7 @@ class GradeState extends State<Grade> {
     required String text,
     required double heightValue,
     required double widthValue,
+    required Color color,
   }) =>
       Container(
         height: heightValue,
@@ -32,11 +33,7 @@ class GradeState extends State<Grade> {
         padding: const EdgeInsets.all(5.0),
         margin: const EdgeInsets.all(5.0),
         decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border.all(
-            color: Colors.black,
-            width: 1,
-          ),
+          color: color,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Center(
@@ -75,7 +72,8 @@ class GradeState extends State<Grade> {
                         buildContainer(
                             text: '3.67 GPA',
                             heightValue: 110,
-                            widthValue: 200),
+                            widthValue: 200,
+                            color: const Color(0xFFFDD1C8)),
                       ],
                     ),
                     Column(
@@ -83,11 +81,13 @@ class GradeState extends State<Grade> {
                         buildContainer(
                             text: 'Total Credits: 57',
                             heightValue: 50,
-                            widthValue: 190),
+                            widthValue: 190,
+                            color: const Color(0xFFFDD1C8)),
                         buildContainer(
                             text: 'Transfered: 4',
                             heightValue: 50,
-                            widthValue: 190),
+                            widthValue: 190,
+                            color: const Color(0xFFFDD1C8)),
                       ],
                     ),
                   ],
@@ -103,19 +103,22 @@ class GradeState extends State<Grade> {
                       },
                       children: items.map((ExpansionItem item) {
                         return ExpansionPanel(
-                            backgroundColor: Colors.grey[300],
+                            backgroundColor: Colors.grey[200],
                             headerBuilder:
                                 (BuildContext context, bool isExpanded) {
                               return Container(
-                                color: const Color(0xFFD75560),
                                 height: 100.0,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFD75560),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
                                 padding: const EdgeInsets.all(25.0),
                                 margin: const EdgeInsets.all(5.0),
                                 child: Row(
                                   children: [
                                     Text(item.header,
                                         style: const TextStyle(
-                                          fontSize: 15,
+                                          fontSize: 20,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white,
                                         )),
@@ -126,9 +129,19 @@ class GradeState extends State<Grade> {
                             },
                             isExpanded: item.isExpanded,
                             body: Container(
-                              color: Colors.grey[300],
+                              color: Colors.grey[200],
                               padding: const EdgeInsets.all(10.0),
-                              child: Text(item.body),
+                              margin: const EdgeInsets.all(5.0),
+                              child: Align(
+                                alignment: Alignment.topLeft,
+                                child: Text(
+                                  item.body,
+                                  style: const TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
                             ));
                       }).toList(),
                     ),

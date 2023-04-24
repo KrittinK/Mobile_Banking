@@ -12,7 +12,7 @@ import 'package:flutter_template/UC001/screens/event.dart';
 import 'package:flutter_template/UC001/screens/connect_with_bank_screen.dart';
 import 'package:flutter_template/UC001/screens/transfer_completed.dart';
 import 'package:flutter_template/UC001/screens/home.dart';
-import 'package:flutter_template/UC001/screens/selection.dart';
+import 'package:flutter_template/UC001/screens/overview.dart';
 import 'package:flutter_template/UC001/screens/grade.dart';
 import 'package:flutter_template/UC001/screens/loading_cmkl.dart';
 
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: Profile(),
+      home: Home(),
       debugShowCheckedModeBanner: false,
     );
   }

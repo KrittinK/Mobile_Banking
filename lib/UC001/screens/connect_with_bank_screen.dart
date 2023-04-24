@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/UC001/screens/payment_screen.dart';
 
 class ConnectBankScreen extends StatefulWidget {
   const ConnectBankScreen({Key? key}) : super(key: key);
@@ -102,27 +103,35 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
             const SizedBox(
               height: 40,
             ),
-            Row(
-              children: [
-                const SizedBox(
-                  width: 300,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    shape: const CircleBorder(),
-                    padding: const EdgeInsets.all(20),
-                    backgroundColor: Colors.red[800],
-                    foregroundColor: Colors.black,
-                  ),
-                  child: const Icon(
-                    Icons.arrow_forward,
-                    color: Colors.white,
-                    size: 30,
-                  ),
-                ),
-              ],
-            ),
+            // Row(
+            //   children: [
+            //     const SizedBox(
+            //       width: 300,
+            //     ),
+            //     ElevatedButton(
+            //       onPressed: () {
+            //         Navigator.of(context).push(
+            //           MaterialPageRoute(
+            //             builder: (BuildContext context) {
+            //               return const PaymentScreen();
+            //             },
+            //           ),
+            //         );
+            //       },
+            //       style: ElevatedButton.styleFrom(
+            //         shape: const CircleBorder(),
+            //         padding: const EdgeInsets.all(20),
+            //         backgroundColor: Colors.red[800],
+            //         foregroundColor: Colors.black,
+            //       ),
+            //       child: const Icon(
+            //         Icons.arrow_forward,
+            //         color: Colors.white,
+            //         size: 30,
+            //       ),
+            //     ),
+            //   ],
+            // ),
           ],
         ),
       ),
