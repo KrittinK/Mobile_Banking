@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/UC001/screens/selection.dart';
+import 'package:flutter_template/UC001/screens/overview.dart';
 
 class BuildChildren extends StatelessWidget {
   const BuildChildren({Key? key, required this.name, required this.image})
@@ -17,7 +17,7 @@ class BuildChildren extends StatelessWidget {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (BuildContext context) {
-                return const Selection();
+                return const Overview();
               },
             ),
           );

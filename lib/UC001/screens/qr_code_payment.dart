@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/UC001/screens/payment_screen.dart';
+import 'package:flutter_template/UC001/screens/transfer_completed.dart';
 
 class QRCodePayment extends StatelessWidget {
   const QRCodePayment({Key? key}) : super(key: key);
@@ -57,7 +59,18 @@ class QRCodePayment extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            buildElevatedButton(text: 'Share', onPressed: () {}),
+            buildElevatedButton(
+              text: 'Sharef',
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return const TransferCompleteScreen();
+                    },
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
