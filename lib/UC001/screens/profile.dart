@@ -28,6 +28,54 @@ class Profile extends StatelessWidget {
         },
       );
 
+  FutureBuilder<String?> FutureLastName({
+    required String studentId,
+    required ProfileController controller,
+  }) =>
+      FutureBuilder(
+        future: controller.getStudentLastName(studentId: studentId),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            String lastName = snapshot.data as String;
+            return Text(lastName,
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ));
+          } else if (snapshot.hasError) {
+            return Text('${snapshot.error}');
+          } else {
+            return const CircularProgressIndicator();
+          }
+        },
+      );
+
+  Widget buildFutureText({
+    required Future<dynamic> future,
+    required String successText,
+    required String errorText,
+  }) {
+    return Column(
+      children: [
+        const SizedBox(height: 20),
+        FutureBuilder(
+          future: future,
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              String data = snapshot.data as String;
+              return Text("$successText: $data");
+            } else if (snapshot.hasError) {
+              return Text('$errorText: ${snapshot.error}');
+            } else {
+              return const CircularProgressIndicator();
+            }
+          },
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     //String userName = 'v';
@@ -81,97 +129,85 @@ class Profile extends StatelessWidget {
             ),
             Column(
               children: [
-                Container(
-                  color: Colors.transparent,
-                  height: 100.0,
-                  padding: const EdgeInsets.all(30.0),
-                  margin: const EdgeInsets.all(5.0),
-                  child: Center(
-                      child: FutureFirstName(
-                          studentId: '1234567890', controller: controller)),
+                Row(
+                  children: [
+                    Container(
+                      color: Colors.transparent,
+                      height: 100.0,
+                      padding: const EdgeInsets.only(left: 105),
+                      margin: const EdgeInsets.all(0),
+                      child: Center(child: FutureFirstName(studentId: '2134567890', controller: controller)),
+                    ),
+                    Container(
+                      color: Colors.transparent,
+                      height: 100.0,
+                      padding: const EdgeInsets.only(left: 10),
+                      margin: const EdgeInsets.all(0),
+                      child: Center(child: FutureLastName(studentId: '2134567890', controller: controller)),
+                    ),
+                  ],
                 ),
                 Container(
                     color: Colors.grey[300],
                     constraints: const BoxConstraints(),
                     padding: const EdgeInsets.all(30.0),
                     margin: const EdgeInsets.all(5.0),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text('Personal Info',
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                color: Colors.grey,
-                              )),
-                          const SizedBox(height: 20),
-                          FutureBuilder(
-                            future: controller.getStudentFirstName(
-                                studentId: '2134567890'),
-                            builder: (context, snapshot) {
-                              if (snapshot.hasData) {
-                                String firstName = snapshot.data as String;
-                                return Text("First Name: $firstName");
-                              } else if (snapshot.hasError) {
-                                return Text('${snapshot.error}');
-                              } else {
-                                return const CircularProgressIndicator();
-                              }
-                            },
-                          ),
-                          const SizedBox(height: 20),
-                          FutureBuilder(
-                            future: controller.getStudentLastName(
-                                studentId: '2134567890'),
-                            builder: (context, snapshot) {
-                              if (snapshot.hasData) {
-                                String lastName = snapshot.data as String;
-                                return Text("Last Name: $lastName");
-                              } else if (snapshot.hasError) {
-                                return Text('${snapshot.error}');
-                              } else {
-                                return const CircularProgressIndicator();
-                              }
-                            },
-                          ),
-                          const SizedBox(height: 20),
-                          FutureBuilder(
-                            future: controller.getStudentEmail(
-                                studentId: '2134567890'),
-                            builder: (context, snapshot) {
-                              if (snapshot.hasData) {
-                                String Email = snapshot.data as String;
-                                return Text("Email: $Email");
-                              } else if (snapshot.hasError) {
-                                return Text('${snapshot.error}');
-                              } else {
-                                return const CircularProgressIndicator();
-                              }
-                            },
-                          ),
-                          
-                          const SizedBox(height: 20),
-                          Text('Class: $classYear'),
-                          const SizedBox(height: 20),
-                          Text('E-mail: $email'),
-                          const SizedBox(height: 20),
-                          Text('Phone: $phone'),
-                          const SizedBox(height: 20),
-                          Text('Address: $address'),
-                          const SizedBox(height: 20),
-                          Row(
-                            children: const [
-                              Text('Active'),
-                              Icon(Icons.circle,
-                                  size: 20, color: Colors.lightGreen),
-                              Text('/'),
-                              Text('Offline'),
-                              Icon(Icons.circle, size: 20, color: Colors.grey),
-                              Text('/'),
-                              Text('Do Not Disturb'),
-                              Icon(Icons.circle, size: 20, color: Colors.red),
-                            ],
-                          ),
-                        ])),
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      const Text('Personal Info',
+                          style: TextStyle(
+                            fontSize: 15.0,
+                            color: Colors.grey,
+                          )),
+
+
+                      buildFutureText(
+                        future: controller.getStudentEmail(studentId: '2134567890'),
+                        successText: 'Email',
+                        errorText: 'Failed to fetch Email',
+                      ),
+
+                      buildFutureText(
+                        future: controller.getStudentClass(studentId: '2134567890'),
+                        successText: 'Class',
+                        errorText: 'Failed to fetch class',
+                      ),
+
+                      buildFutureText(
+                        future: controller.getStudentPhone(studentId: '2134567890'),
+                        successText: 'Phone',
+                        errorText: 'Failed to fetch phone',
+                      ),
+
+                      buildFutureText(
+                        future: controller.getStudentAddress(studentId: '2134567890'),
+                        successText: 'Address',
+                        errorText: 'Failed to fetch address',
+                      ),
+
+                      const SizedBox(height: 20),
+
+                      // const SizedBox(height: 20),
+                      // Text('Class: $classYear'),
+                      // const SizedBox(height: 20),
+                      // Text('E-mail: $email'),
+                      // const SizedBox(height: 20),
+                      // Text('Phone: $phone'),
+                      // const SizedBox(height: 20),
+                      // Text('Address: $address'),
+                      // const SizedBox(height: 20),
+                      Row(
+                        children: const [
+                          Text('Active'),
+                          Icon(Icons.circle, size: 20, color: Colors.lightGreen),
+                          Text('/'),
+                          Text('Offline'),
+                          Icon(Icons.circle, size: 20, color: Colors.grey),
+                          Text('/'),
+                          Text('Do Not Disturb'),
+                          Icon(Icons.circle, size: 20, color: Colors.red),
+                        ],
+                      ),
+                    ])),
               ],
             ),
           ],
