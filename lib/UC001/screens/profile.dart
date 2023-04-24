@@ -106,7 +106,7 @@ class Profile extends StatelessWidget {
                           const SizedBox(height: 20),
                           FutureBuilder(
                             future: controller.getStudentFirstName(
-                                studentId: '1234567890'),
+                                studentId: '2134567890'),
                             builder: (context, snapshot) {
                               if (snapshot.hasData) {
                                 String firstName = snapshot.data as String;
@@ -121,7 +121,7 @@ class Profile extends StatelessWidget {
                           const SizedBox(height: 20),
                           FutureBuilder(
                             future: controller.getStudentLastName(
-                                studentId: '1234567890'),
+                                studentId: '2134567890'),
                             builder: (context, snapshot) {
                               if (snapshot.hasData) {
                                 String lastName = snapshot.data as String;
@@ -133,6 +133,22 @@ class Profile extends StatelessWidget {
                               }
                             },
                           ),
+                          const SizedBox(height: 20),
+                          FutureBuilder(
+                            future: controller.getStudentEmail(
+                                studentId: '2134567890'),
+                            builder: (context, snapshot) {
+                              if (snapshot.hasData) {
+                                String Email = snapshot.data as String;
+                                return Text("Email: $Email");
+                              } else if (snapshot.hasError) {
+                                return Text('${snapshot.error}');
+                              } else {
+                                return const CircularProgressIndicator();
+                              }
+                            },
+                          ),
+                          
                           const SizedBox(height: 20),
                           Text('Class: $classYear'),
                           const SizedBox(height: 20),

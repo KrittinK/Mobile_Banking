@@ -26,7 +26,7 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
           ]),
           toolbarHeight: 80,
           elevation: 0.0,
-          backgroundColor: const Color.fromARGB(255, 224, 108, 87),
+          backgroundColor: const Color(0xFFE06C57),
           foregroundColor: Colors.white,
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
