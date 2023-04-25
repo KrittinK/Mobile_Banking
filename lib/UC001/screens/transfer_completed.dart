@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class TransferCompleteScreen extends StatelessWidget {
   const TransferCompleteScreen({Key? key}) : super(key: key);
@@ -7,9 +6,9 @@ class TransferCompleteScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // format the current time using DateFormat
-    final currentTime = DateFormat('h:mm a').format(DateTime.now());
-    final currentDate = DateFormat('d MMMM').format(DateTime.now());
-    final currentYear = DateFormat('yy').format(DateTime.now());
+    // final currentTime = DateFormat('h:mm a').format(DateTime.now());
+    // final currentDate = DateFormat('d MMMM').format(DateTime.now());
+    // final currentYear = DateFormat('yy').format(DateTime.now());
 
     return SafeArea(
       child: Scaffold(

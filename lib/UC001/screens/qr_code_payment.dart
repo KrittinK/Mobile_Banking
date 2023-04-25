@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/UC001/screens/payment_screen.dart';
 import 'package:flutter_template/UC001/screens/transfer_completed.dart';
 
 class QRCodePayment extends StatelessWidget {

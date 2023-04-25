@@ -4,9 +4,33 @@ import 'package:flutter_template/UC001/screens/notifications_screen.dart';
 import 'package:flutter_template/UC001/screens/payment_options.dart';
 import 'package:flutter_template/UC001/screens/profile.dart';
 import 'package:flutter_template/UC001/screens/grade.dart';
+import 'package:flutter_template/UC001/screens/home.dart';
+import 'package:flutter_template/UC001/screens/children_screen.dart';
 
 class Overview extends StatelessWidget {
   const Overview({super.key});
+
+  Widget buildIconButton({
+    required String image,
+    required Widget screen,
+    required BuildContext context,
+  }) =>
+      GestureDetector(
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context) {
+                return screen;
+              },
+            ),
+          );
+        },
+        child: Image(
+          image: AssetImage(image),
+          height: 100,
+          width: 100,
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +71,35 @@ class Overview extends StatelessWidget {
             ],
           ),
           leadingWidth: 500,
+        ),
+        bottomNavigationBar: BottomAppBar(
+          color: Colors.white,
+          height: 70,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              buildIconButton(
+                image: 'images/home/home.png',
+                context: context,
+                screen: const Home(),
+              ),
+              buildIconButton(
+                image: 'images/home/overview.png',
+                context: context,
+                screen: const Overview(),
+              ),
+              buildIconButton(
+                image: 'images/home/myKids.png',
+                context: context,
+                screen: const ChildrenScreen(),
+              ),
+              buildIconButton(
+                image: 'images/home/more.png',
+                context: context,
+                screen: const Home(),
+              ),
+            ],
+          ),
         ),
         body: ListView(
           children: [

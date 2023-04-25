@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/UC001/screens/payment_options2.dart';
-import 'package:flutter_template/UC001/screens/type_of_payment.dart';
 
 class PaymentOptions extends StatefulWidget {
   const PaymentOptions({super.key});

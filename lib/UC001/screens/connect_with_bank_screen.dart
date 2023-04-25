@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/UC001/screens/payment_screen.dart';
 
 class ConnectBankScreen extends StatefulWidget {
   const ConnectBankScreen({Key? key}) : super(key: key);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/UC001/screens/overview.dart';
+import 'package:flutter_template/UC001/screens/home.dart';
 
 class BuildChildren extends StatelessWidget {
   const BuildChildren({Key? key, required this.name, required this.image})
@@ -65,6 +66,28 @@ class BuildChildren extends StatelessWidget {
 class ChildrenScreen extends StatelessWidget {
   const ChildrenScreen({Key? key}) : super(key: key);
 
+  Widget buildIconButton({
+    required String image,
+    required Widget screen,
+    required BuildContext context,
+  }) =>
+      GestureDetector(
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context) {
+                return screen;
+              },
+            ),
+          );
+        },
+        child: Image(
+          image: AssetImage(image),
+          height: 100,
+          width: 100,
+        ),
+      );
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -87,6 +110,35 @@ class ChildrenScreen extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
+          ),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          color: Colors.white,
+          height: 70,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              buildIconButton(
+                image: 'images/home/home.png',
+                context: context,
+                screen: const Home(),
+              ),
+              buildIconButton(
+                image: 'images/home/overview.png',
+                context: context,
+                screen: const Overview(),
+              ),
+              buildIconButton(
+                image: 'images/home/myKids.png',
+                context: context,
+                screen: const ChildrenScreen(),
+              ),
+              buildIconButton(
+                image: 'images/home/more.png',
+                context: context,
+                screen: const Home(),
+              ),
+            ],
           ),
         ),
         body: Column(

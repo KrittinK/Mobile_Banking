@@ -67,7 +67,7 @@ flutter:
     - images/JCB.png
     - images/event1.png
     - images/event2.png
-    - images/QRExample.png/
+    - images/QRExample.png
     - images/Payment.png
     - images/Children.png
     - images/Connect_with_bank.png
@@ -78,23 +78,26 @@ flutter:
     - images/type_of_payments/connect_with_bank.png
     - images/payment_options2/pay_all.png
     - images/payment_options2/pay_by_installment.png
-    # - images/home/payment.png
-    # - images/home/transfer.png
-    # - images/home/university.png
-    # - images/home/withdraw.png
-    # - images/home/statement.png
-    # - images/home/grade.png
-    # - images/home/event.png
-    # - images/home/contact.png
-    # - images/home/event3.png
-    # - images/home/event4.png
-    # - images/home/event5.png
-    # - images/home/home.png
-    # - images/home/banking.png
-    # - images/home/scan.png
-    # - images/home/more.png
-    # - images/home/gradeNoBG.png
-    - images/home
+    - images/home/payment.png
+    - images/home/transfer.png
+    - images/home/university.png
+    - images/home/withdraw.png
+    - images/home/statement.png
+    - images/home/grade.png
+    - images/home/event.png
+    - images/home/contact.png
+    - images/home/event3.png
+    - images/home/event4.png
+    - images/home/event5.png
+    - images/home/home.png
+    - images/home/banking.png
+    - images/home/scan.png
+    - images/home/more.png
+    - images/home/gradeNoBG.png
+    - images/home/overview.png
+    - images/home/myKids.png
+    
+
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

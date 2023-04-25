@@ -31,7 +31,7 @@ class ProfileController {
     final studentDataList = await GetStudentDataService().getstudentdata();
 
     for (final student in studentDataList) {
-      if (student.id == studentId) return student.Class;
+      if (student.id == studentId) return student.class1;
     }
 
     return studentId;
@@ -43,7 +43,7 @@ class ProfileController {
     final studentDataList = await GetStudentDataService().getstudentdata();
 
     for (final student in studentDataList) {
-      if (student.id == studentId) return student.GPA;
+      if (student.id == studentId) return student.gpa;
     }
 
     return studentId;
@@ -55,7 +55,7 @@ class ProfileController {
     final studentDataList = await GetStudentDataService().getstudentdata();
 
     for (final student in studentDataList) {
-      if (student.id == studentId) return student.Credit;
+      if (student.id == studentId) return student.credit;
     }
 
     return studentId;
@@ -67,7 +67,7 @@ class ProfileController {
     final studentDataList = await GetStudentDataService().getstudentdata();
 
     for (final student in studentDataList) {
-      if (student.id == studentId) return student.Email;
+      if (student.id == studentId) return student.email;
     }
 
     return studentId;
@@ -79,7 +79,7 @@ class ProfileController {
     final studentDataList = await GetStudentDataService().getstudentdata();
 
     for (final student in studentDataList) {
-      if (student.id == studentId) return student.Phone;
+      if (student.id == studentId) return student.phone;
     }
 
     return studentId;
@@ -91,7 +91,7 @@ class ProfileController {
     final studentDataList = await GetStudentDataService().getstudentdata();
 
     for (final student in studentDataList) {
-      if (student.id == studentId) return student.Address;
+      if (student.id == studentId) return student.address;
     }
 
     return studentId;

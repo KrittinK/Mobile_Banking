@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/UC001/screens/children_screen.dart';
+import 'package:flutter_template/UC001/screens/connect_with_bank_screen.dart';
+import 'package:flutter_template/UC001/screens/event.dart';
+import 'package:flutter_template/UC001/screens/grade.dart';
 import 'package:flutter_template/UC001/screens/overview.dart';
 import 'package:flutter_template/UC001/controllers/profile_controller.dart';
-import 'package:flutter_template/UC001/screens/qr_code_payment.dart';
+import 'package:flutter_template/UC001/screens/payment_options.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -80,14 +83,9 @@ class Home extends StatelessWidget {
                 screen: const ChildrenScreen(),
               ),
               buildIconButton(
-                image: 'images/home/scan.png',
-                context: context,
-                screen: const Overview(),
-              ),
-              buildIconButton(
                 image: 'images/home/more.png',
                 context: context,
-                screen: const Overview(),
+                screen: const Home(),
               ),
             ],
           ),
@@ -136,7 +134,7 @@ class Home extends StatelessWidget {
                           buildIconButton(
                             image: 'images/home/statement.png',
                             context: context,
-                            screen: const Overview(),
+                            screen: const ConnectBankScreen(),
                           ),
                         ],
                       ),
@@ -145,13 +143,13 @@ class Home extends StatelessWidget {
                           buildIconButton(
                             image: 'images/home/payment.png',
                             context: context,
-                            screen: const Overview(),
+                            screen: const PaymentOptions(),
                           ),
                           const SizedBox(height: 10),
                           buildIconButton(
                             image: 'images/home/grade.png',
                             context: context,
-                            screen: const Overview(),
+                            screen: const Grade(),
                           ),
                         ],
                       ),
@@ -166,7 +164,7 @@ class Home extends StatelessWidget {
                           buildIconButton(
                             image: 'images/home/event.png',
                             context: context,
-                            screen: const Overview(),
+                            screen: const Event(),
                           ),
                         ],
                       ),

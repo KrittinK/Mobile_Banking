@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/UC001/screens/connect_with_bank_screen.dart';
-import 'package:flutter_template/UC001/screens/payment_options2.dart';
 import 'package:flutter_template/UC001/screens/payment_screen.dart';
 import 'package:flutter_template/UC001/screens/qr_code_payment.dart';
 

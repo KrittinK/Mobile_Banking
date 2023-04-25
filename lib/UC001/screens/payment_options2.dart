@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/UC001/screens/connect_with_bank_screen.dart';
-import 'package:flutter_template/UC001/screens/payment_screen.dart';
-import 'package:flutter_template/UC001/screens/transfer_completed.dart';
 import 'package:flutter_template/UC001/screens/type_of_payment.dart';
 
 class PaymentOptions2 extends StatelessWidget {

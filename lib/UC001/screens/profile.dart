@@ -5,7 +5,7 @@ class Profile extends StatelessWidget {
   const Profile({super.key});
 
   //make function to call FutureBuilder and return String
-  FutureBuilder<String?> FutureFirstName({
+  FutureBuilder<String?> futureFirstName({
     required String studentId,
     required ProfileController controller,
   }) =>
@@ -87,7 +87,7 @@ class Profile extends StatelessWidget {
                   padding: const EdgeInsets.all(30.0),
                   margin: const EdgeInsets.all(5.0),
                   child: Center(
-                      child: FutureFirstName(
+                      child: futureFirstName(
                           studentId: '1234567890', controller: controller)),
                 ),
                 Container(
@@ -139,8 +139,8 @@ class Profile extends StatelessWidget {
                                 studentId: '2134567890'),
                             builder: (context, snapshot) {
                               if (snapshot.hasData) {
-                                String Email = snapshot.data as String;
-                                return Text("Email: $Email");
+                                String email = snapshot.data as String;
+                                return Text("Email: $email");
                               } else if (snapshot.hasError) {
                                 return Text('${snapshot.error}');
                               } else {
