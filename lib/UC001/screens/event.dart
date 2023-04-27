@@ -13,7 +13,7 @@ final List _header = [
 ];
 
 final List _body = [
-  'Date: 9 March 2023 Time: 12-1pm Location: 607 Sandbox',
+  'Date: 9 March 2023 Time: 12-1pm LocFtion: 607 Sandbox',
   'Date: 14 March 2023 Time: 10.30-12 pm Location: LIVE on Zoom',
   'Date: 9 March 2023 Time: 12-1pm Location: 607 Sandbox',
 ];

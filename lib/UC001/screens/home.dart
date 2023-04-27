@@ -3,9 +3,11 @@ import 'package:flutter_template/UC001/screens/children_screen.dart';
 import 'package:flutter_template/UC001/screens/connect_with_bank_screen.dart';
 import 'package:flutter_template/UC001/screens/event.dart';
 import 'package:flutter_template/UC001/screens/grade.dart';
+import 'package:flutter_template/UC001/screens/notifications_screen.dart';
 import 'package:flutter_template/UC001/screens/overview.dart';
 import 'package:flutter_template/UC001/controllers/profile_controller.dart';
 import 'package:flutter_template/UC001/screens/payment_options.dart';
+import 'package:flutter_template/UC001/screens/profile.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -46,7 +48,13 @@ class Home extends StatelessWidget {
                 icon: const Icon(Icons.account_circle_rounded),
                 iconSize: 35,
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return const Profile();
+                      },
+                    ),
+                  );
                 },
               ),
               const Spacer(flex: 1),
@@ -54,7 +62,13 @@ class Home extends StatelessWidget {
                 icon: const Icon(Icons.notifications),
                 iconSize: 35,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/editProfile');
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return const NotificationsScreen();
+                      },
+                    ),
+                  );
                 },
               ),
             ],

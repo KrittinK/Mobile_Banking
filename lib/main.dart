@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/UC001/screens/grade.dart';
 import 'package:flutter_template/UC001/screens/home.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: Home(),
+      home: Grade(),
       debugShowCheckedModeBanner: false,
     );
   }
