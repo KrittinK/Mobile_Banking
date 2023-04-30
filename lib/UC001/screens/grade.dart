@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/UC001/controllers/profile_controller.dart';
 
 class Grade extends StatefulWidget {
   const Grade({super.key});
@@ -14,12 +15,40 @@ class GradeState extends State<Grade> {
         body: '-Machine Learning: 3\n'
             '-Intro to Programming: 4\n'
             '-Data Structures: 2\n'),
-    ExpansionItem(
-        header: "HCD-301", body: '-Ethics Om Computer Engineering: 4\n'),
+    ExpansionItem(header: "HCD-301", body: '-Ethics Om Computer Engineering: 4\n'),
   ];
 
 // class Grade extends StatelessWidget {
 //   const Grade({super.key});
+
+  Row futureGPA({
+    required String studentId,
+    required ProfileController controller,
+  }) =>
+      Row(
+        children: [
+          const Text('GPA: '), // corrected syntax
+          FutureBuilder(
+            future: controller.getStudentGPA(studentId: studentId),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                String gpa = snapshot.data as String;
+                return Text(
+                  gpa,
+                  style: const TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.black,
+                  ),
+                );
+              } else if (snapshot.hasError) {
+                return Text('${snapshot.error}');
+              } else {
+                return const CircularProgressIndicator();
+              }
+            },
+          ),
+        ],
+      );
 
   Widget buildContainer({
     required String text,
@@ -67,27 +96,35 @@ class GradeState extends State<Grade> {
                 const SizedBox(height: 20),
                 Row(
                   children: [
-                    Column(
-                      children: [
-                        buildContainer(
-                            text: '3.67 GPA',
-                            heightValue: 110,
-                            widthValue: 200,
-                            color: const Color(0xFFFDD1C8)),
-                      ],
+                    Center(
+                      child: Row(
+                        children: [
+                          Container(
+                            color: Colors.orange[50],
+                            height: 100.0,
+                            width: 200,
+                            padding: const EdgeInsets.only(left: 17),
+                            margin: const EdgeInsets.all(0),
+                            child: Center(
+                              child: futureGPA(
+                                studentId: '2134567890',
+                                controller: ProfileController(),
+                              ),
+                            ),
+                          ),
+                          //create text called GPA
+                          //   buildContainer(
+                          // text: '3.67 GPA',
+                          // heightValue: 110,
+                          // widthValue: 200,
+                          // color: const Color(0xFFFDD1C8)),
+                        ],
+                      ),
                     ),
                     Column(
                       children: [
-                        buildContainer(
-                            text: 'Total Credits: 57',
-                            heightValue: 50,
-                            widthValue: 190,
-                            color: const Color(0xFFFDD1C8)),
-                        buildContainer(
-                            text: 'Transfered: 4',
-                            heightValue: 50,
-                            widthValue: 190,
-                            color: const Color(0xFFFDD1C8)),
+                        buildContainer(text: 'Total Credits: 57', heightValue: 50, widthValue: 190, color: const Color(0xFFFDD1C8)),
+                        buildContainer(text: 'Transfered: 4', heightValue: 50, widthValue: 190, color: const Color(0xFFFDD1C8)),
                       ],
                     ),
                   ],
@@ -104,8 +141,7 @@ class GradeState extends State<Grade> {
                       children: items.map((ExpansionItem item) {
                         return ExpansionPanel(
                             backgroundColor: Colors.grey[200],
-                            headerBuilder:
-                                (BuildContext context, bool isExpanded) {
+                            headerBuilder: (BuildContext context, bool isExpanded) {
                               return Container(
                                 height: 100.0,
                                 decoration: BoxDecoration(
@@ -159,6 +195,5 @@ class ExpansionItem {
   final String header;
   final String body;
 
-  ExpansionItem(
-      {this.isExpanded = false, required this.header, required this.body});
+  ExpansionItem({this.isExpanded = false, required this.header, required this.body});
 }
