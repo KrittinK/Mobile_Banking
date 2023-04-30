@@ -47,7 +47,7 @@ class PaymentOptionsState extends State<PaymentOptions> {
             ExpansionPanelList(
               expansionCallback: (int index, bool isExpanded) {
                 setState(() {
-                  items[index].isExpanded = !items[index].isExpanded;
+                  items[index].isExpanded = items[index].isExpanded;
                 });
               },
               children: items.map((ExpansionItem item) {

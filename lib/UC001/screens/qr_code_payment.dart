@@ -10,7 +10,7 @@ class QRCodePayment extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title:
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+              const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Text(
               'QR Code ',
               style: TextStyle(fontSize: 23),

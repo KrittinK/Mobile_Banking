@@ -5,11 +5,11 @@ class LoadingCmkl extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Scaffold(
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Center(
               child: Image(
                 image: AssetImage('images/CMKL-logo.png'),

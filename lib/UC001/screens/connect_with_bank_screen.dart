@@ -8,7 +8,7 @@ class ConnectBankScreen extends StatefulWidget {
 }
 
 class _ConnectBankScreenState extends State<ConnectBankScreen> {
-  bool _isChecked = false;
+  //bool _isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
       child: Scaffold(
         appBar: AppBar(
           title:
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+              const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Text(
               'Connect with bank',
               style: TextStyle(fontSize: 23),
@@ -69,28 +69,28 @@ class _ConnectBankScreenState extends State<ConnectBankScreen> {
             const SizedBox(
               height: 20,
             ),
-            Row(
+            const Row(
               children: [
-                const Padding(
+                Padding(
                   padding: EdgeInsets.symmetric(horizontal: 12.0),
                   child: SizedBox(
                     width: 20,
                   ),
                 ),
-                Checkbox(
-                  value: _isChecked,
-                  onChanged: (value) {
-                    setState(() {
-                      _isChecked = value!;
-                    });
-                  },
-                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                  visualDensity: VisualDensity.compact,
-                  checkColor: Colors.white, // change the color of the checkmark
-                  fillColor: MaterialStateProperty.all<Color>(Colors.grey[
-                      600]!), // change the background color of the checkbox
-                ),
-                const Padding(
+                // Checkbox(
+                //   value: _isChecked,
+                //   onChanged: (value) {
+                //     setState(() {
+                //       _isChecked = value!;
+                //     });
+                //   },
+                //   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                //   visualDensity: VisualDensity.compact,
+                //   checkColor: Colors.white, // change the color of the checkmark
+                //   fillColor: MaterialStateProperty.all<Color>(Colors.grey[
+                //       600]), // change the background color of the checkbox
+                // ),
+                Padding(
                   padding: EdgeInsets.symmetric(horizontal: 0.0),
                   child: Text(
                     'I agree to the terms and conditions',

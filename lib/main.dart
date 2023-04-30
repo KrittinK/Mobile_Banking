@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/UC001/screens/grade.dart';
+//import 'package:flutter_template/UC001/screens/grade.dart';
 import 'package:flutter_template/UC001/screens/home.dart';
 
 void main() {

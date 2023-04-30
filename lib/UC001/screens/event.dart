@@ -23,7 +23,7 @@ final List _description = [
       'We’re expected everyone to get your AI application home from this 3-hours workshop XD\n'
       '-P.S. If you join the training, the students will receive a'
       'skill card in SYS-304: Scalable Algorithms and Infrastructure Competency.',
-  '📣 Calling all engineering students and faculty! Dive into the topic of large'
+  '📣 Calling all engineering students and faculty Dive into the topic of large'
       'language models (LLM) which are made of billions of parameters and open a wide'
       'range of new applications, including natural language processing, human-machine interactions, generative AI, and healthcare applications.',
   'Sally heloajsofpoasdjfadsjfpas jsjfosjafpasj pfso fasdjf',

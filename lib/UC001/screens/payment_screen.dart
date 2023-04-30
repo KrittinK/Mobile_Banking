@@ -10,7 +10,7 @@ class PaymentScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title:
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+              const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Text(
               'Credit Card',
               style: TextStyle(fontSize: 23),
@@ -59,8 +59,8 @@ class PaymentScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Padding(
                   padding: EdgeInsets.only(top: 35.0, left: 45.0),
                   child: Text(
@@ -97,8 +97,8 @@ class PaymentScreen extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 45.0),
                   child: Text(
@@ -135,23 +135,23 @@ class PaymentScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Row(
+            const Row(
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-                const Padding(
+                Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8.0),
                   child: SizedBox(
                     width: 20,
                   ),
                 ),
-                const Text(
+                Text(
                   '  Expiry Date',
                   style: TextStyle(fontSize: 20),
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 85,
                 ),
-                const Text(
+                Text(
                   'CVV',
                   style: TextStyle(fontSize: 20),
                 ),

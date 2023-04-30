@@ -13,7 +13,7 @@ class TransferCompleteScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+          title: const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Text(
               'Payment Successful',
               style: TextStyle(fontSize: 23),

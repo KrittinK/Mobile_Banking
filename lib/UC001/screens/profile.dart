@@ -28,6 +28,7 @@ class Profile extends StatelessWidget {
         },
       );
 
+  // ignore: non_constant_identifier_names
   FutureBuilder<String?> FutureLastName({
     required String studentId,
     required ProfileController controller,
@@ -79,10 +80,10 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //String userName = 'v';
-    String classYear = 'Year 1';
-    String email = 'pdangkaj@cmkl.ac.th';
-    String phone = '092-XXX-XXXX';
-    String address = 'Silom, Bangkok';
+    // String classYear = 'Year 1';
+    // String email = 'pdangkaj@cmkl.ac.th';
+    // String phone = '092-XXX-XXXX';
+    // String address = 'Silom, Bangkok';
     final controller = ProfileController();
 
     return SafeArea(
@@ -195,8 +196,8 @@ class Profile extends StatelessWidget {
                       // const SizedBox(height: 20),
                       // Text('Address: $address'),
                       // const SizedBox(height: 20),
-                      Row(
-                        children: const [
+                      const Row(
+                        children: [
                           Text('Active'),
                           Icon(Icons.circle, size: 20, color: Colors.lightGreen),
                           Text('/'),

@@ -88,7 +88,7 @@ class NotificationsScreen extends StatelessWidget {
                 image: 'images/Events/payment_form.png',
                 color: const Color(0xFF313C42)),
             buildContainer(
-                text: 'Payment Success!',
+                text: 'Payment Success',
                 icon: Icons.check_circle_outline_rounded,
                 size: 40,
                 color: Colors.green),

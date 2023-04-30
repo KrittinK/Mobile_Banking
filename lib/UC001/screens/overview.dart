@@ -119,8 +119,8 @@ class Overview extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Row(
-                          children: const [
+                        const Row(
+                          children: [
                             Text('Tution Fee',
                                 style: TextStyle(
                                     fontSize: 20,
@@ -281,8 +281,8 @@ class Overview extends StatelessWidget {
                                   height: 120,
                                   width: 100,
                                   color: Colors.transparent,
-                                  child: Column(
-                                    children: const [
+                                  child: const Column(
+                                    children: [
                                       Text('Upcoming Event',
                                           style: TextStyle(
                                               fontSize: 20,
@@ -298,8 +298,8 @@ class Overview extends StatelessWidget {
                                 ),
                               ),
                               const SizedBox(width: 50),
-                              Column(
-                                children: const [
+                              const Column(
+                                children: [
                                   Image(
                                     image: AssetImage('images/home/event3.png'),
                                     height: 100,

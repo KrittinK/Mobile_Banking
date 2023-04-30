@@ -94,7 +94,7 @@ class ChildrenScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title:
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+              const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Text(
               'Your Children',
               style: TextStyle(fontSize: 23),
@@ -141,8 +141,8 @@ class ChildrenScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: Column(
-          children: const [
+        body: const Column(
+          children: [
             BuildChildren(
               name: 'King',
               image: 'images/Children.png',
